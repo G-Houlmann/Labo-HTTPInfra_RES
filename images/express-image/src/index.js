@@ -6,7 +6,7 @@ var app = express();
 
 
 app.get('/', function(req, res){
-    res.send("Hello RES");
+    res.send("random number " + chance.integer());
 });
 
 app.listen(3000, function(){
