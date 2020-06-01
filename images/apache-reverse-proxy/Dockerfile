@@ -11,5 +11,5 @@ RUN apt-get update && \
 RUN dos2unix /usr/local/bin/apache2-foreground
 CMD ["/usr/local/bin/apache2-foreground"]
 
-RUN a2enmod proxy proxy_http
+RUN a2enmod proxy proxy_http proxy_balancer lbmethod_byrequests
 RUN a2ensite 000-* 001-*
